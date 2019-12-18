@@ -13,7 +13,17 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
-            return View(movie);
+            // NOTE: usually used ActionResult helpers
+            //return View(movie);
+            //return HttpNotFound();
+            //return Redirect(); // RedirectResult
+
+            //for debugging
+            //return Content("Hello World");
+            //return new EmptyResult();
+
+            // redirect and pass arguments to next page: $page = 1 and sortBy = "name"
+            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name"});
         }
     }
 }
