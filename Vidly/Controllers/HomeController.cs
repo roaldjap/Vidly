@@ -10,6 +10,7 @@ namespace Vidly.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.ApplicationName = "Vidly";
             return View();
         }
 

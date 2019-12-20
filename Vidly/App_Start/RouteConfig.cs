@@ -21,6 +21,17 @@ namespace Vidly
                 new { controller = "Movies", action = "ByReleaseDate" },
                 new { year = @"\d{4}" , month = @"\d{2}" }); // added a contraint for parameters on url
 
+
+            routes.MapRoute(
+                "Details",
+                "customers/details/{id}",
+                new { controller = "Customers", action = "Details" });
+
+            routes.MapRoute(
+                "MovieDetails",
+                "movies/details/{id}",
+                new { controller = "Movies", action = "Details" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
