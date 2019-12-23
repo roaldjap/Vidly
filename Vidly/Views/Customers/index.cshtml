@@ -12,6 +12,9 @@
             Customer Name
         </th>
         <th>
+            Subscription Name
+        </th>
+        <th>
             Actions
         </th>
     </tr>
@@ -21,6 +24,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => customer.Name)
+            </td>
+            <td>
+                @customer.MembershipType.Name
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = customer.Id }) |
