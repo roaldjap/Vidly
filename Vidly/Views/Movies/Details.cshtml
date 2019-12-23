@@ -4,6 +4,13 @@
     <h1>
         <strong> @Model.Name</strong>
     </h1>
+    <hr />
+    <ul>
+        <li><strong>Genre: </strong>@Model.Genre.Name</li>
+        <li><strong>Release Date: </strong> @Model.ReleaseDate.Value.ToString("dddd, dd MMMM yyyy")</li>
+        <li><strong>Date Added: </strong>@Model.CreatedAt.ToString("dddd, dd MMMM yyyy")</li>
+        <li><strong>No of Stocks: </strong>@Model.NoOfStocks</li>
+    </ul>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
